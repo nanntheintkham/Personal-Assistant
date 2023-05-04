@@ -1,0 +1,34 @@
+public class bmi {
+    double BMI;
+   
+   
+
+    void calculatebmi(double weight,double height){
+    
+    double kilo= weight*0.45359237;
+        double meters= height*0.0254;
+        
+        BMI= kilo/(meters*meters);
+        System.out.println("BMI: "+BMI);
+        
+        if(BMI<18.5){
+            System.out.println("Underweight");
+        }
+        else if(BMI>=18.5 && BMI<=24.9){
+            System.out.println("Normal");
+        }
+         else if(BMI>=25.0&& BMI<=29.9){
+            System.out.println("Overweight");
+        }
+         else if(BMI>30.0){
+            System.out.println("Obese");
+            
+        }
+         else{
+             System.out.println("Error");
+         }
+        
+         
+}
+    
+}

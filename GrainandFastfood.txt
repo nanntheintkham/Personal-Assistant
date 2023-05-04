@@ -1,0 +1,74 @@
+import java.util.Scanner;
+
+public class GrainandFastfood {
+    int choice,choice1,pizzaslice,breadslice,cakeslice,numofmeal,numofcan;
+    double grainfastfoodcalories;
+    void grain(){
+        
+        System.out.println("....................Grain...................");
+             System.out.println("Choose: 1.Pizza     2.Bread   3.Cake");
+             System.out.print("Choice:  ");
+                 Scanner s1 = new Scanner(System.in);
+                 choice= s1.nextInt();
+                 if(choice==1){
+                       System.out.print("Number of slice: ");
+                     Scanner pizza = new Scanner(System.in);
+                     pizzaslice=pizza.nextInt();
+                     grainfastfoodcalories+=(230*pizzaslice);
+           
+                     System.out.println("pizza calories:"+grainfastfoodcalories);
+                     
+                                                              
+                 }
+                else if(choice==2){
+                       System.out.print("Number of slice: ");
+                     Scanner bread = new Scanner(System.in);
+                     breadslice=bread.nextInt();
+                     grainfastfoodcalories+=(100*breadslice);
+           
+                     System.out.println("breadslice calories:"+grainfastfoodcalories);
+                 }
+                else if(choice==3){
+                      System.out.print("Number of slice: ");
+                     Scanner cake = new Scanner(System.in);
+                     cakeslice=cake.nextInt();
+                     grainfastfoodcalories+=(424*cakeslice);
+           
+                     System.out.println("cake calories:"+grainfastfoodcalories);
+                }
+                else{
+                     System.out.println("Try again");
+                     grain();
+                }
+                 
+                 
+    }
+    void fastfood(){
+        
+         System.out.println("....................Grain...................");
+             System.out.println("Choose: 1.Noraml Meal     2.CarbonatedsDrink");
+             System.out.print("Choice:  ");
+                 Scanner ffood = new Scanner(System.in);
+                 choice1= ffood.nextInt();
+                 if(choice1==1){
+                       System.out.println("Number of meal: ");
+                     Scanner meal = new Scanner(System.in);
+                     numofmeal=meal.nextInt();
+                     grainfastfoodcalories+=(800*numofmeal);
+           
+                     System.out.println("fastfoodmeal calories: "+grainfastfoodcalories);
+                     
+                                                              
+                 }
+                else if(choice==2){
+                       System.out.println("Number of can: ");
+                     Scanner drink = new Scanner(System.in);
+                    numofcan =drink.nextInt();
+                     grainfastfoodcalories+=(180*numofcan);
+           
+                     System.out.println("drink calories:"+grainfastfoodcalories);
+                 }
+        
+    }
+    
+}

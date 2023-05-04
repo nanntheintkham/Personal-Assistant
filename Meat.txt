@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+public class Meat {
+
+    int meatchoice, numofegg, chickengram, beefgram, porkgram, fishgram, seafoodgram, muttongram;
+    double meatcalories;
+
+    void meat() {
+
+
+
+        System.out.println(".........................Meat.........................");
+        System.out.println("Choose: 1.Egg   2.Chicken   3.Beef  4.Pork");
+        System.out.println("        5.Fish  6.Seafood   7.Mutton");
+        System.out.print("Choice:  ");
+        Scanner meat = new Scanner(System.in);
+        meatchoice = meat.nextInt();
+        if (meatchoice == 1) {
+            System.out.print("Num of eggs: ");
+            Scanner egg = new Scanner(System.in);
+            numofegg = egg.nextInt();
+            meatcalories += (12 * numofegg);
+
+            System.out.println("egg calories:" + meatcalories);
+
+
+        } else if (meatchoice == 2) {
+            System.out.print("Grams(greater than 100): ");
+            Scanner chicken = new Scanner(System.in);
+            chickengram = chicken.nextInt();
+            meatcalories += (140 * chickengram);
+
+            System.out.println("chicken calories:" + meatcalories);
+        
+        } else if (meatchoice == 3) {
+            System.out.print("Grams(greater than 100): ");
+            Scanner beef = new Scanner(System.in);
+            beefgram = beef.nextInt();
+            meatcalories += (217 * beefgram);
+
+            System.out.println("beef calories" + meatcalories);
+        } else if (meatchoice == 4) {
+            System.out.print("Grams(greater than 100): ");
+            Scanner pork = new Scanner(System.in);
+            porkgram = pork.nextInt();
+            meatcalories += (242 * porkgram);
+
+            System.out.println("pork calories:" + meatcalories);
+        } else if (meatchoice == 5) {
+            System.out.print("Grams(greater than 100): ");
+            Scanner fish = new Scanner(System.in);
+            fishgram = fish.nextInt();
+            meatcalories += (82 * fishgram);
+
+            System.out.println("fish calories:" + meatcalories);
+        } else if (meatchoice == 6) {
+            System.out.print("Grams(greater than 100): ");
+            Scanner seafood = new Scanner(System.in);
+            seafoodgram = seafood.nextInt();
+            meatcalories += (100 * seafoodgram);
+
+            System.out.println("seafood" + meatcalories);
+        } else if (meatchoice == 7) {
+            System.out.print("Grams(greater than 100): ");
+            Scanner mutton = new Scanner(System.in);
+            muttongram = mutton.nextInt();
+            meatcalories += (294 * muttongram);
+
+            System.out.println("mutton calories:" + meatcalories);
+        }
+
+    }
+}

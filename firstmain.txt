@@ -1,0 +1,42 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package sampleproject;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Mike Chang
+ */
+public class firstmain {
+     
+    public static void main(String[] args) {
+        char choice1 = 0;
+      do{  System.out.println("                         Your Personal Care  ^_^");
+        System.out.println("");
+        System.out.println("            1.FinanceManager                    2.HealthCare       ");
+          System.out.print("Choice: ");
+        Scanner sc= new Scanner(System.in);
+        int choice= sc.nextInt();
+        if(choice==1){
+            System.out.println("--------------------Your FinanceManager-----------------------------");
+        }
+        else if(choice==2){
+            System.out.println("----------------------Your HealthCare-----------------------------");
+            
+            
+        }
+        else{
+            System.out.println("Try again.");
+            continue;
+        }
+        
+          System.out.println("Main Menu again?y/n");
+          System.out.print("Choice: ");
+           choice1= sc.next().charAt(0);
+        }while(choice1 !='n');
+      }
+    
+}

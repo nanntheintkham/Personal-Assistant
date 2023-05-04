@@ -1,0 +1,84 @@
+import java.util.Scanner;
+
+
+
+public class RiceDairy {
+      double c,c1,numofglass,slice,yogurtamt,numofbowl,numofplate;
+      double ricedairycalories;
+    
+      
+       
+        
+      void rice(){
+          
+        
+        System.out.println("......................Rice..................");
+             System.out.println("Choose: 1.Bowl      2.Plate");
+             System.out.print("Choice:  ");
+                 Scanner s1 = new Scanner(System.in);
+                 c = s1.nextInt();
+                 if(c==1){
+                     System.out.print("Number of bowls: ");
+                     Scanner b = new Scanner(System.in);
+                     numofbowl=b.nextDouble();
+                     ricedairycalories+=(136*numofbowl);
+           
+                     System.out.println(   "rice bowl calories:"+ricedairycalories);
+                    
+                     
+                 }
+                 else if(c==2){
+                     System.out.print("Number of plates: ");
+                     Scanner p= new Scanner(System.in);
+                     numofplate=p.nextDouble();
+                     ricedairycalories+=(272*numofplate);
+
+                    System.out.println(   "rice plate calories:"+ricedairycalories);
+                 }
+                 else{
+                     System.out.println("Try Again for rice");
+                     rice();
+                 }
+                
+      }
+
+        void dairyproduct(){
+         System.out.println("...................DairyProducts..................");
+             System.out.println("Choose: 1.Milk    2.Cheese  3.Yogurt");
+             System.out.print("Choice:  ");
+                 Scanner dairy = new Scanner(System.in);
+                 c1 = dairy.nextInt();
+                 if(c1==1){
+                     System.out.println("Number of glasses: ");
+                     Scanner n= new Scanner(System.in);
+                     numofglass=n.nextDouble();
+                     ricedairycalories+=(42*numofglass);
+           
+                     System.out.println("milk calories:" +ricedairycalories);
+                 }
+                 else if(c1==2){
+                     System.out.println("Number of slice: ");
+                     Scanner n= new Scanner(System.in);
+                     slice=n.nextDouble();
+                     ricedairycalories+=(60*slice);
+
+                    System.out.println("cheese calories:" + ricedairycalories);
+                 }
+                 else if(c1==3){
+                     System.out.println("Number of glasses: ");
+                     Scanner n= new Scanner(System.in);
+                     yogurtamt=n.nextDouble();
+                     ricedairycalories+= (61*yogurtamt);
+                       System.out.println("yougurt calories:" + ricedairycalories);
+                 }
+                 else{
+                     System.out.println("Try Again for rice");
+                     dairyproduct();
+                 }
+        
+    }
+}
+                 
+
+    
+

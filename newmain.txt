@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class main {
+
+    private static char yesno1;//********
+    private static int i;
+ 
+
+    public static void main(String[] args) {
+
+        double w;
+        double h;
+        String g;
+        int a, choice1;
+        System.out.println("----------------------------------------------------");
+        System.out.println("                Health Care");
+        System.out.println("----------------------------------------------------");
+        System.out.println("Your Gender : male/female");
+        System.out.print("Choice:  ");
+        Scanner mf = new Scanner(System.in);
+        g = mf.nextLine();
+
+        System.out.print("Enter your age: ");
+        Scanner agee = new Scanner(System.in);
+        a = agee.nextInt();
+        System.out.println("----------------------------------------------------");
+        System.out.println("");
+        System.out.println("Enter your Weight and Height pls,");
+        System.out.println("");
+        System.out.print("Enter Your Weight in Pounds:  ");
+        Scanner ww = new Scanner(System.in);
+        w = ww.nextDouble();
+        System.out.print("Enter Your Height in Inches: ");
+        Scanner hh = new Scanner(System.in);
+        h = hh.nextDouble();
+        System.out.println("");
+        do {
+            System.out.println("....................................");
+            System.out.println("                 Menu        ");
+            System.out.println("....................................");
+            System.out.println("  1.BMI             2.DailyCalories");
+            System.out.print("Pls Choose a number: ");
+            Scanner s = new Scanner(System.in);
+            choice1 = s.nextInt();
+            System.out.println("");
+            if (choice1 == 1) {
+                bmi bmi = new bmi();
+                bmi.calculatebmi(w, h);
+            }
+
+            else if (choice1 == 2) {
+                input input1 = new input();
+                System.out.println("Your Total Calories: " + input1.calories(w, h, a, g));
+            }
+            else{
+                System.out.println("Try Again.");
+                continue;
+            }
+            System.out.println("Menu again? :y/n");
+            System.out.print("Choice:");
+            Scanner yn1 = new Scanner(System.in);
+            yesno1 = yn1.next().charAt(0);
+            i++;
+        } while (yesno1 != 'n');
+      
+    }
+}
